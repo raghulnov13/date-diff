@@ -18,6 +18,7 @@
 
 
     <script>
+        // days
         function calculateDays() {
             let dob = document.getElementById("dob").value;
             let current = document.getElementById("current").value;
@@ -25,7 +26,17 @@
             let b = new Date(current);
             let time = Math.abs(b - a);
             let days = Math.ceil(time / (1000 * 60 * 60 * 24));
-            document.getElementById("output").innerHTML = days;
+            document.getElementById("output").innerHTML = days+'Days';
+        }
+        // hours
+        function calculateDays() {
+            let dob = document.getElementById("dob").value;
+            let current = document.getElementById("current").value;
+            let a = new Date(dob);
+            let b = new Date(current);
+            let time = Math.abs(b - a);
+            let days = Math.ceil(time / (1000 * 60 * 60));
+            document.getElementById("output").innerHTML = hours+'Hours';
         }
     </script>
 </body>
