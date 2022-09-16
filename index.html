@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="date" id="dob">
+    <input type="date" id="current">
+    <button onclick="calculateDays()">Get Difference</button>
+    <p id="output"></p>
+
+
+
+
+    <script>
+        function calculateDays() {
+            let dob = document.getElementById("dob").value;
+            let current = document.getElementById("current").value;
+            let a = new Date(dob);
+            let b = new Date(current);
+            let time = Math.abs(b - a);
+            let days = Math.ceil(time / (1000 * 60 * 60 * 24));
+            document.getElementById("output").innerHTML = days;
+        }
+    </script>
+</body>
+
+</html>
